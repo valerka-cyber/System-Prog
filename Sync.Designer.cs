@@ -71,6 +71,8 @@ namespace SystemProg
             this.button1 = new System.Windows.Forms.Button();
             this.buttonHook = new System.Windows.Forms.Button();
             this.buttonDigits = new System.Windows.Forms.Button();
+            this.buttonTaskInf = new System.Windows.Forms.Button();
+            this.buttonReadFile = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -429,7 +431,7 @@ namespace SystemProg
             // 
             // buttonPoolInf
             // 
-            this.buttonPoolInf.Location = new System.Drawing.Point(211, 353);
+            this.buttonPoolInf.Location = new System.Drawing.Point(372, 292);
             this.buttonPoolInf.Name = "buttonPoolInf";
             this.buttonPoolInf.Size = new System.Drawing.Size(155, 23);
             this.buttonPoolInf.TabIndex = 12;
@@ -439,7 +441,7 @@ namespace SystemProg
             // 
             // buttonAsync
             // 
-            this.buttonAsync.Location = new System.Drawing.Point(211, 385);
+            this.buttonAsync.Location = new System.Drawing.Point(211, 354);
             this.buttonAsync.Name = "buttonAsync";
             this.buttonAsync.Size = new System.Drawing.Size(155, 24);
             this.buttonAsync.TabIndex = 13;
@@ -471,17 +473,39 @@ namespace SystemProg
             // 
             this.buttonDigits.Location = new System.Drawing.Point(372, 258);
             this.buttonDigits.Name = "buttonDigits";
-            this.buttonDigits.Size = new System.Drawing.Size(137, 27);
+            this.buttonDigits.Size = new System.Drawing.Size(155, 27);
             this.buttonDigits.TabIndex = 16;
             this.buttonDigits.Text = "Digits";
             this.buttonDigits.UseVisualStyleBackColor = true;
             this.buttonDigits.Click += new System.EventHandler(this.buttonDigits_Click);
+            // 
+            // buttonTaskInf
+            // 
+            this.buttonTaskInf.Location = new System.Drawing.Point(373, 322);
+            this.buttonTaskInf.Name = "buttonTaskInf";
+            this.buttonTaskInf.Size = new System.Drawing.Size(154, 23);
+            this.buttonTaskInf.TabIndex = 17;
+            this.buttonTaskInf.Text = "buttonTaskInf";
+            this.buttonTaskInf.UseVisualStyleBackColor = true;
+            this.buttonTaskInf.Click += new System.EventHandler(this.buttonTaskInf_Click);
+            // 
+            // buttonReadFile
+            // 
+            this.buttonReadFile.Location = new System.Drawing.Point(373, 354);
+            this.buttonReadFile.Name = "buttonReadFile";
+            this.buttonReadFile.Size = new System.Drawing.Size(154, 23);
+            this.buttonReadFile.TabIndex = 18;
+            this.buttonReadFile.Text = "buttonReadFile";
+            this.buttonReadFile.UseVisualStyleBackColor = true;
+            this.buttonReadFile.Click += new System.EventHandler(this.buttonReadFile_Click);
             // 
             // Sync
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonReadFile);
+            this.Controls.Add(this.buttonTaskInf);
             this.Controls.Add(this.buttonDigits);
             this.Controls.Add(this.buttonHook);
             this.Controls.Add(this.button1);
@@ -553,5 +577,7 @@ namespace SystemProg
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonHook;
         private System.Windows.Forms.Button buttonDigits;
+        private System.Windows.Forms.Button buttonTaskInf;
+        private System.Windows.Forms.Button buttonReadFile;
     }
 }

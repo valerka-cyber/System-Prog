@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -405,7 +406,34 @@ namespace SystemProg
             new HookForm().ShowDialog(this);
         }
 
-     
+       async private void buttonTaskInf_Click(object sender, EventArgs e)
+        {
+            ConsoleLog.Items.Clear();
+            result = 100;
+            for (int i = 0; i < 12; i++)
+            {
+                await Task.Run(() => calcMonth(i));
+            }
+        }
+        private void readFile(String path)
+        {
+            String line;
+            using (StreamReader sr = new StreamReader(path))
+            {
+                Thread.Sleep(5000);
+                line = sr.ReadLine();
+                while (line != null)
+                {
+                    Invoke(new Action(() => ConsoleLog.Items.Add(line)));
+                    line = sr.ReadLine();
+                }
+                sr.Close();
+            }
+        }
+        private void buttonReadFile_Click(object sender, EventArgs e)
+        {
+            var file = Task.Run(() => readFile(@"C:\Users\Valeriia\Desktop\Лекции System Prog"));
+        }
     }
 }
 /*
